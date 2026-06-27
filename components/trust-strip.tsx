@@ -12,10 +12,10 @@ import { COMPANY } from '@/lib/site'
 const ITEMS = [
   { icon: ShieldCheck, title: 'NCR Registered', sub: COMPANY.ncr },
   { icon: BadgeCheck, title: 'SACRRA Registered', sub: COMPANY.sacrra },
-  { icon: Zap, title: 'Fast Approvals', sub: 'Quick turnaround' },
+  { icon: Zap, title: 'Fast Approvals', sub: 'Same-day decisions' },
   { icon: UserCheck, title: 'Walk-ins Welcome', sub: 'No appointment needed' },
   { icon: MessageCircle, title: 'WhatsApp Applications', sub: 'Apply instantly' },
-  { icon: Building2, title: 'Two Lydenburg Branches', sub: 'Close to you' },
+  { icon: Building2, title: 'Local Lydenburg Branches', sub: 'Close to you' },
 ]
 
 export function TrustStrip() {

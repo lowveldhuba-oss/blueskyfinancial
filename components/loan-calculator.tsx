@@ -8,20 +8,19 @@ import { LinkButton } from '@/components/link-button'
 import { cn } from '@/lib/utils'
 
 const AMOUNT_PRESETS = [500, 1000, 2000, 4000, 6000, 8000]
-const TERMS = [1, 2, 3, 4, 5, 6]
 
 export function LoanCalculator({ className }: { className?: string }) {
   const [amount, setAmount] = useState(2000)
-  const [months, setMonths] = useState(3)
+  const months = 1
 
-  const result = useMemo(() => calculateLoan(amount, months), [amount, months])
+  const result = useMemo(() => calculateLoan(amount, months), [amount])
 
   const pct =
     ((amount - COMPANY.loanMin) / (COMPANY.loanMax - COMPANY.loanMin)) * 100
 
   const waMessage = `Hi BlueSky, I'd like to apply for a loan of ${formatRand(
     amount,
-  )} over ${months} month${months > 1 ? 's' : ''}. My estimated monthly repayment is ${formatRand(
+  )} over 1 month. My estimated monthly repayment is ${formatRand(
     result.monthly,
   )}.`
 
@@ -92,29 +91,6 @@ export function LoanCalculator({ className }: { className?: string }) {
         </div>
       </div>
 
-      {/* Term */}
-      <div className="mb-5">
-        <label className="mb-2 block text-sm font-semibold text-foreground">
-          2. Repayment Period
-        </label>
-        <div className="grid grid-cols-6 gap-1.5">
-          {TERMS.map((t) => (
-            <button
-              key={t}
-              type="button"
-              onClick={() => setMonths(t)}
-              className={cn(
-                'rounded-lg border py-2 text-xs font-semibold transition-colors',
-                months === t
-                  ? 'border-primary bg-primary text-primary-foreground'
-                  : 'border-border bg-background text-foreground/70 hover:border-primary/40',
-              )}
-            >
-              {t} mo
-            </button>
-          ))}
-        </div>
-      </div>
 
       {/* Result */}
         <div className="mb-4 rounded-2xl bg-primary p-4 text-center text-primary-foreground">
@@ -125,29 +101,9 @@ export function LoanCalculator({ className }: { className?: string }) {
           {formatRand(result.monthly)}
         </p>
         <p className="text-xs text-primary-foreground/80">
-          {months} month{months > 1 ? 's' : ''} · 5% per month simple interest · Representative APR (simple annualisation) 60%
+          1 month · 5% per month simple interest · Representative APR (simple annualisation) 60% · Estimate includes interest, monthly service fee, initiation fee and credit life cover
         </p>
       </div>
-
-      <dl className="mb-4 space-y-2 text-sm">
-        <Row label="Loan Principal" value={formatRand(result.principal)} />
-        <Row label="Interest (5% p.m.)" value={formatRand(result.interest)} />
-        <Row
-          label="Initiation Fee (once-off)"
-          value={formatRand(result.initiationFee)}
-        />
-          <Row label="VAT (15%)" value={formatRand(result.vat)} />
-          <Row label="Credit Life" value={formatRand(result.creditLife)} />
-        <Row label="Service Fee" value={formatRand(result.serviceFee)} />
-        <div className="mt-2 flex items-center justify-between border-t border-border pt-3">
-          <dt className="font-heading font-bold text-foreground">
-            Estimated Total Repayment
-          </dt>
-          <dd className="font-heading text-lg font-extrabold text-primary">
-            {formatRand(result.total)}
-          </dd>
-        </div>
-      </dl>
 
       <LinkButton
         external
@@ -166,11 +122,3 @@ export function LoanCalculator({ className }: { className?: string }) {
   )
 }
 
-function Row({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex items-center justify-between">
-      <dt className="text-muted-foreground">{label}</dt>
-      <dd className="font-semibold text-foreground tabular-nums">{value}</dd>
-    </div>
-  )
-}

@@ -51,11 +51,11 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-md text-base leading-relaxed text-foreground sm:text-lg">
-            Quick, responsible loans from{' '}
+            Quick, transparent loans from{' '}
             <span className="font-semibold text-primary">
               {formatRand(COMPANY.loanMin)} to {formatRand(COMPANY.loanMax)}
             </span>{' '}
-            with fast approvals, transparent fees and friendly local service.
+            with fast approvals and local Lydenburg support.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -86,6 +86,13 @@ export function Hero() {
                 Visit Our Branches
               </LinkButton>
             </motion.div>
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-2 text-xs text-slate-600 sm:mt-5">
+            <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-3 py-1 font-semibold text-slate-700 shadow-sm">
+              <ShieldCheck className="h-4 w-4 text-orange-500" aria-hidden="true" />
+              NCR registered • SACRRA member • Two local branches
+            </span>
           </div>
         </div>
 

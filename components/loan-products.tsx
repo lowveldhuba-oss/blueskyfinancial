@@ -2,7 +2,7 @@ import { Banknote, CalendarClock, LifeBuoy, Store } from 'lucide-react'
 import { SectionHeading } from '@/components/section-heading'
 import { MotionDiv } from '@/components/motion'
 import { Reveal } from '@/components/reveal'
-import { COMPANY, formatRand } from '@/lib/site'
+import { COMPANY, DEFAULT_WA_MESSAGE, formatRand, waLink } from '@/lib/site'
 
 const PRODUCTS = [
   {
@@ -11,54 +11,73 @@ const PRODUCTS = [
     desc: `Flexible personal loans from ${formatRand(COMPANY.loanMin)} to ${formatRand(
       COMPANY.loanMax,
     )} to help you today.`,
+    badge: 'Instant decision',
   },
   {
     icon: CalendarClock,
-    title: 'Payday Loans',
+    title: 'Payday Support',
     desc: 'Short-term salary advances to get you through before payday.',
+    badge: 'Transparent pricing',
   },
   {
     icon: LifeBuoy,
-    title: 'Emergency Loans',
-    desc: 'Quick cash for unexpected expenses and urgent needs.',
+    title: 'Emergency Cash',
+    desc: 'Quick help for unexpected expenses and urgent needs.',
+    badge: 'Emergency access',
   },
   {
     icon: Store,
-    title: 'Walk-in Branch Assistance',
-    desc: 'Friendly in-person support at our two Lydenburg branches.',
+    title: 'Branch Support',
+    desc: 'Friendly in-person service at our two Lydenburg branches.',
+    badge: 'Local branch service',
   },
 ]
 
 export function LoanProducts() {
   return (
-    <section id="loans" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 border-t border-gold-soft bg-slate-950/5 backdrop-blur-sm">
-      <div className="mx-auto max-w-7xl">
+    <section id="loans" className="relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8 lg:py-24 border-t border-orange-200/80 bg-orange-50/90 backdrop-blur-sm">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[radial-gradient(circle_at_top,rgba(248,181,0,0.18),transparent_55%)] blur-3xl" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-[radial-gradient(circle_at_bottom,rgba(248,181,0,0.20),transparent_50%)] blur-3xl" />
+      <div className="relative mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Our Loan Solutions"
           title="Loans built around your real life"
-          description="Whatever the reason, we offer responsible lending options with transparent fees and a friendly local team ready to help."
+          description="Short-term loans tailored to your cashflow, with transparent pricing and local support."
         />
 
-        <div className="mt-10 grid grid-cols-2 gap-5 auto-rows-fr lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-6 auto-rows-fr lg:grid-cols-4">
           {PRODUCTS.map((p, i) => (
             <Reveal key={p.title} delay={i * 80}>
               <MotionDiv
                 delay={i * 0.06}
-                className="relative flex h-full flex-col rounded-[2rem] border border-slate-200/70 bg-gradient-to-br from-white via-slate-50 to-slate-100 p-6 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.5)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_35px_90px_-30px_rgba(15,23,42,0.35)]"
+                className="relative flex h-full flex-col rounded-[2rem] border border-orange-200/80 bg-white/95 p-6 shadow-[0_32px_70px_-35px_rgba(15,23,42,0.18)] transition duration-500 hover:-translate-y-1 hover:border-orange-300 hover:shadow-[0_40px_85px_-35px_rgba(15,23,42,0.20)]"
               >
-                <div className="absolute -inset-x-6 -top-6 h-1 bg-gold-300/30 rounded-t-md" />
-                <div className="z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary shadow-sm ring-1 ring-primary/10">
-                  <p.icon className="h-6 w-6 text-primary stroke-current" aria-hidden="true" />
+                <div className="absolute inset-x-6 -top-6 h-1.5 rounded-t-2xl bg-gradient-to-r from-orange-300 via-sky-400 to-orange-300" />
+                <div className="z-10 mt-5 flex-1">
+                  <h3 className="font-heading text-xl font-semibold text-foreground">
+                    {p.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-relaxed text-slate-600">
+                    {p.desc}
+                  </p>
                 </div>
-                <h3 className="z-10 mt-4 font-heading text-lg font-bold text-foreground">
-                  {p.title}
-                </h3>
-                <p className="z-10 mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                  {p.desc}
-                </p>
+                <div className="mt-6 inline-flex rounded-full border border-sky-200/80 bg-sky-50 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-700">
+                  {p.badge}
+                </div>
               </MotionDiv>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <a
+            href={waLink(DEFAULT_WA_MESSAGE)}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-sky-600 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-sky-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
+          >
+            Apply via WhatsApp
+          </a>
         </div>
       </div>
     </section>

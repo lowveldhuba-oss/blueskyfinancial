@@ -23,7 +23,7 @@ export type Branch = {
 export const BRANCHES: Branch[] = [
   {
     id: 'branch-1',
-    name: 'Branch 1 — Voortrekker St',
+    name: 'Branch 1 - Voortrekker St',
     address: [
       'Shop 03 Cashbuild Complex',
       'Voortrekker Street',
@@ -35,7 +35,7 @@ export const BRANCHES: Branch[] = [
   },
   {
     id: 'branch-2',
-    name: 'Branch 2 — Viljoen St',
+    name: 'Branch 2 - Viljoen St',
     address: [
       '46 Viljoen Street',
       'Steelburger Building',
@@ -48,10 +48,10 @@ export const BRANCHES: Branch[] = [
 ]
 
 export const TRADING_HOURS = [
-  { day: 'Monday – Friday', hours: '08:00 – 16:30' },
-  { day: 'Saturday', hours: '08:00 – 13:00' },
+  { day: 'Monday - Friday', hours: '08:00 - 16:30' },
+  { day: 'Saturday', hours: '08:00 - 13:00' },
   { day: 'Sunday', hours: 'Closed' },
-  { day: 'Public Holidays', hours: '08:00 – 13:00' },
+  { day: 'Public Holidays', hours: '08:00 - 13:00' },
 ]
 
 /** Return whether the business is open now in South Africa (Africa/Johannesburg). */

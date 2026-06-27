@@ -41,9 +41,8 @@ export function Fees() {
         />
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_380px]">
-          {/* FAQ accordion */}
           <Reveal className="divide-y divide-border overflow-hidden rounded-3xl border border-gold-soft bg-background/60 shadow-soft">
-            {FAQS.map((faq, i) => {
+              {FAQS.map((faq, i) => {
               const isOpen = open === i
               return (
                 <div key={faq.q}>
@@ -96,19 +95,19 @@ export function Fees() {
               </h3>
               <dl className="mt-4 space-y-3 text-sm">
                 <ExRow label="Loan Amount" value="R2,500" />
-                <ExRow label="Term" value="90 Days" />
-                <ExRow label="Interest &amp; Fees" value="R945.46" />
+                <ExRow label="Term" value="30 Days" />
+                <ExRow label="Interest &amp; Fees" value="R556.25" />
                 <div className="flex items-center justify-between border-t border-border/40 pt-3">
                   <dt className="font-semibold text-orange-700">Total Repayment</dt>
                   <dd className="font-heading text-xl font-extrabold text-orange-700">
-                    R3,445.46
+                    R3,070.00
                   </dd>
                 </div>
                 <ExRow label="Representative APR (simple annualisation)" value="60%" />
               </dl>
               <p className="mt-4 text-xs leading-relaxed text-orange-700/80">
                 Credit life cover: R5.50 per R1,000 borrowed (covers death,
-                disability &amp; retrenchment).
+                disability &amp; retrenchment). For a R2,500 loan this is R13.75.
               </p>
             </MotionDiv>
           </Reveal>
