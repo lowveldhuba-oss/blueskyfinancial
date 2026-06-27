@@ -33,7 +33,7 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[58%_08%] sm:object-[72%_18%] md:object-[74%_20%] lg:object-[52%_08%]"
+          className="object-cover object-[90%_20%] sm:object-[90%_24%] md:object-[84%_22%] lg:object-[52%_08%]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/0 via-background/10 to-background/6 lg:via-background/20 lg:to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent lg:from-background/30" />
@@ -44,7 +44,7 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto grid max-w-7xl gap-8 px-4 pb-14 pt-10 sm:px-6 lg:grid-cols-[1.05fr_minmax(0,460px)] lg:gap-6 lg:px-8 lg:pb-20 lg:pt-16">
         {/* Copy */}
-        <div className="max-w-xl rounded-[2rem] bg-slate-950/10 p-6 backdrop-blur-xl">
+        <div className="max-w-xl p-6">
           <div className="flex items-center gap-3">
             <OpenStatus />
           </div>
