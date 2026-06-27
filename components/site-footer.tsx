@@ -10,9 +10,9 @@ export function SiteFooter() {
           <div className="lg:col-span-2">
             <Logo />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-background/60">
-              {COMPANY.legalName} is a registered credit provider offering
-              quick, responsible loans to help you when you need it most. A
-              helping hand you can count on.
+              <span className="font-semibold text-background">
+                {COMPANY.legalName} is a registered South African credit provider committed to providing responsible, transparent and affordable short-term lending solutions.
+              </span>
             </p>
             <div className="mt-5 flex gap-3">
               <a
@@ -76,27 +76,17 @@ export function SiteFooter() {
 
         <div className="mt-10 border-t border-background/15 pt-6">
           <p className="text-xs leading-relaxed text-background/50">
-            Loans are granted based on affordability assessments and credit
-            profile. {COMPANY.name} promotes responsible lending. Fees and
-            interest are governed by the National Credit Act No. 34 of 2005.
-            {' '}
-            {COMPANY.legalName} is an authorised financial services provider and
-            registered credit provider {COMPANY.ncr}.
+            Loans are granted subject to affordability assessments and credit
+            profile. BlueSky Financial Services promotes responsible lending in
+            accordance with the National Credit Act No. 34 of 2005.
           </p>
           <p className="mt-4 text-xs text-background/50">
-            © {new Date().getFullYear()} {COMPANY.legalName}. All rights
-            reserved.
+            © {new Date().getFullYear()} BlueSky Financial Services (Pty) Ltd.
+            All rights reserved.
           </p>
           <p className="mt-4 text-xs leading-relaxed text-background/50">
             Website designed, developed and maintained by{' '}
-            <a
-              href="https://www.lowveldhub.co.za"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80"
-            >
-              LowveldHub
-            </a>
+            <span className="font-semibold text-background">LowveldHub</span>
             .
           </p>
         </div>

@@ -31,11 +31,10 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[50%_10%]"
+          className="object-cover object-[50%_15%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/0 via-background/10 to-background/6 md:via-background/30 md:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-background/20 to-transparent md:from-background/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/0 via-background/10 to-background/6 md:via-background/20 md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent md:from-background/30" />
       </div>
 
       <MotionDiv x={-18} delay={0.05} className="relative z-10 mx-auto grid max-w-7xl gap-8 px-4 pb-14 pt-10 sm:px-6 lg:grid-cols-[1.05fr_minmax(0,460px)] lg:gap-6 lg:px-8 lg:pb-20 lg:pt-16">
@@ -71,7 +70,7 @@ export function Hero() {
                 className="h-auto rounded-full bg-[#25D366] py-3 text-base font-semibold text-white hover:bg-[#1fb855]"
               >
                 <MessageCircle className="h-5 w-5" aria-hidden="true" />
-                Chat on WhatsApp
+                Apply on WhatsApp
               </LinkButton>
             </motion.div>
             <motion.div
