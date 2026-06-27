@@ -106,11 +106,11 @@
 
 /* Light orange accent palette and typography tokens */
 :root {
-  --orange: #FF8C42; /* light-warm orange */
-  --orange-50: rgba(255,140,66,0.06);
-  --orange-100: rgba(255,140,66,0.12);
-  --orange-200: rgba(255,140,66,0.18);
-  --orange-300: rgba(255,140,66,0.28);
+  --orange: #F97316; /* warmer premium orange */
+  --orange-50: rgba(249,115,22,0.08);
+  --orange-100: rgba(249,115,22,0.16);
+  --orange-200: rgba(249,115,22,0.24);
+  --orange-300: rgba(249,115,22,0.34);
 }
 
 /* Typographic scale tokens (used by utility classes below) */
