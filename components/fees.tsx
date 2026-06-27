@@ -32,7 +32,7 @@ export function Fees() {
   const [open, setOpen] = useState<number | null>(0)
 
   return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 border-t border-gold-soft">
+    <section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-20 border-t border-gold-soft">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Fees &amp; Interest"

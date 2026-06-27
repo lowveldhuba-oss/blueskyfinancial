@@ -21,7 +21,7 @@ import {
 
 export function ContactBranches() {
   return (
-    <section id="contact" className="bg-secondary px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <section id="contact" className="bg-secondary px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Contact &amp; Branches"

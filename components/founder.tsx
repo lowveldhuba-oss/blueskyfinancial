@@ -7,7 +7,7 @@ import { Reveal } from '@/components/reveal'
 
 export function Founder() {
   return (
-    <section className="bg-gradient-to-b from-slate-50 via-orange-50 to-orange-100 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <section className="bg-gradient-to-b from-slate-50 via-orange-50 to-orange-100 px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
       <Reveal className="flex justify-center">
         <MotionDiv
           hover

@@ -14,7 +14,7 @@ const REQUIREMENTS = [
 
 export function Requirements() {
   return (
-    <section className="relative overflow-hidden bg-slate-50 px-4 py-16 sm:px-6 lg:px-8 lg:py-24 border border-orange-200/40 ring-1 ring-orange-50">
+    <section className="relative overflow-hidden bg-slate-50 px-4 py-14 sm:px-6 lg:px-8 lg:py-20 border border-orange-200/40 ring-1 ring-orange-50">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_top,rgba(251,191,36,0.18),transparent_55%)] blur-3xl" />
       <div className="relative mx-auto max-w-6xl">
         <SectionHeading
@@ -26,13 +26,13 @@ export function Requirements() {
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.3fr_0.9fr]">
           <div className="rounded-[2rem] border border-slate-200/80 bg-white/95 p-8 shadow-[0_36px_80px_-48px_rgba(15,23,42,0.16)]">
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
               {REQUIREMENTS.map((req, i) => (
                 <Reveal key={req.label} delay={i * 60}>
                   <MotionDiv
                     hover
                     delay={i * 0.08}
-                    className="group flex items-start gap-4 rounded-3xl border border-slate-200/70 bg-slate-50/90 p-5 transition duration-300 hover:-translate-y-0.5 hover:border-orange-200 hover:bg-white"
+                    className="group flex items-start gap-4 rounded-3xl border border-slate-200/70 bg-slate-50/90 p-4 transition duration-300 hover:-translate-y-0.5 hover:border-orange-200 hover:bg-white"
                   >
                     <span className="mt-1 flex h-11 w-11 items-center justify-center rounded-2xl bg-orange-100 text-orange-700 shadow-sm ring-1 ring-orange-100">
                       <Check className="h-5 w-5" aria-hidden="true" />
