@@ -37,72 +37,73 @@ export function LoanCalculator({ className }: { className?: string }) {
         </span>
         <div>
           <h2 className="font-heading text-lg font-bold text-foreground">
-            Calculate Your Loan
+            Loan Calculator
           </h2>
           <p className="text-xs text-muted-foreground">
-            Get an instant estimate in seconds
+            Estimate your repayment before you apply.
           </p>
         </div>
       </div>
 
-      {/* Amount */}
-      <div className="mb-5">
-        <div className="mb-2 flex items-center justify-between">
-          <label htmlFor="loan-amount" className="text-sm font-semibold text-foreground">
-            1. Loan Amount
-          </label>
-          <span className="rounded-lg bg-secondary px-3 py-1 font-heading text-base font-bold text-primary">
-            {formatRand(amount)}
-          </span>
+      <div className="grid gap-6 md:grid-cols-[1.7fr_minmax(260px,1fr)]">
+        <div>
+          <div className="mb-5">
+            <div className="mb-2 flex items-center justify-between">
+              <label htmlFor="loan-amount" className="text-sm font-semibold text-foreground">
+                1. Loan Amount
+              </label>
+              <span className="rounded-lg bg-secondary px-3 py-1 font-heading text-base font-bold text-primary">
+                {formatRand(amount)}
+              </span>
+            </div>
+            <input
+              id="loan-amount"
+              type="range"
+              className="bs-range w-full"
+              min={COMPANY.loanMin}
+              max={COMPANY.loanMax}
+              step={50}
+              value={amount}
+              onChange={(e) => setAmount(Number(e.target.value))}
+              style={{
+                background: `linear-gradient(to right, var(--primary) ${pct}%, var(--secondary) ${pct}%)`,
+              }}
+            />
+            <div className="mt-1 flex justify-between text-xs text-muted-foreground">
+              <span>{formatRand(COMPANY.loanMin)}</span>
+              <span>{formatRand(COMPANY.loanMax)}</span>
+            </div>
+            <div className="mt-3 grid grid-cols-6 gap-1.5">
+              {AMOUNT_PRESETS.map((preset) => (
+                <button
+                  key={preset}
+                  type="button"
+                  onClick={() => setAmount(preset)}
+                  className={cn(
+                    'rounded-lg border py-1.5 text-xs font-semibold transition-colors',
+                    amount === preset
+                      ? 'border-primary bg-primary text-primary-foreground'
+                      : 'border-border bg-background text-foreground/70 hover:border-primary/40',
+                  )}
+                >
+                  {preset >= 1000 ? `R${preset / 1000}k` : `R${preset}`}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
-        <input
-          id="loan-amount"
-          type="range"
-          className="bs-range w-full"
-          min={COMPANY.loanMin}
-          max={COMPANY.loanMax}
-          step={50}
-          value={amount}
-          onChange={(e) => setAmount(Number(e.target.value))}
-          style={{
-            background: `linear-gradient(to right, var(--primary) ${pct}%, var(--secondary) ${pct}%)`,
-          }}
-        />
-        <div className="mt-1 flex justify-between text-xs text-muted-foreground">
-          <span>{formatRand(COMPANY.loanMin)}</span>
-          <span>{formatRand(COMPANY.loanMax)}</span>
-        </div>
-        <div className="mt-3 grid grid-cols-6 gap-1.5">
-          {AMOUNT_PRESETS.map((preset) => (
-            <button
-              key={preset}
-              type="button"
-              onClick={() => setAmount(preset)}
-              className={cn(
-                'rounded-lg border py-1.5 text-xs font-semibold transition-colors',
-                amount === preset
-                  ? 'border-primary bg-primary text-primary-foreground'
-                  : 'border-border bg-background text-foreground/70 hover:border-primary/40',
-              )}
-            >
-              {preset >= 1000 ? `R${preset / 1000}k` : `R${preset}`}
-            </button>
-          ))}
-        </div>
-      </div>
 
-
-      {/* Result */}
-        <div className="mb-4 rounded-2xl bg-primary p-4 text-center text-primary-foreground">
-        <p className="text-xs font-medium uppercase tracking-wide text-primary-foreground/80">
-          Estimated Monthly Repayment
-        </p>
-        <p className="font-heading text-4xl font-extrabold tabular-nums">
-          {formatRand(result.monthly)}
-        </p>
-        <p className="text-xs text-primary-foreground/80">
-          1 month · 5% per month simple interest · Representative APR (simple annualisation) 60% · Estimate includes interest, monthly service fee, initiation fee and credit life cover
-        </p>
+        <div className="rounded-2xl bg-primary p-4 text-center text-primary-foreground">
+          <p className="text-xs font-medium uppercase tracking-wide text-primary-foreground/80">
+            Estimated Monthly Repayment
+          </p>
+          <p className="font-heading text-4xl font-extrabold tabular-nums">
+            {formatRand(result.monthly)}
+          </p>
+          <p className="text-[11px] leading-6 text-primary-foreground/80">
+            1 month · 5% per month simple interest · Representative APR (simple annualisation) 60% · Estimate includes interest, monthly service fee, initiation fee and credit life cover
+          </p>
+        </div>
       </div>
 
       <LinkButton

@@ -50,18 +50,18 @@ export function Requirements() {
             <MotionDiv
               hover
               delay={0.12}
-              className="rounded-[2rem] border border-orange-200/70 bg-orange-50/90 p-8 shadow-[0_36px_80px_-48px_rgba(251,191,36,0.18)] transition duration-300 hover:-translate-y-0.5"
+              className="rounded-[2rem] border border-orange-200/70 bg-orange-50/95 p-8 shadow-[0_36px_80px_-48px_rgba(251,191,36,0.18)] transition duration-300 hover:-translate-y-0.5"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100 text-orange-700 shadow-sm ring-1 ring-orange-100">
-                <AlertTriangle className="h-5 w-5" aria-hidden="true" />
+              <div className="flex items-center gap-3 rounded-3xl border border-orange-200 bg-orange-100 px-4 py-3 text-orange-700 shadow-sm ring-1 ring-orange-100">
+                <span className="text-xl">⚠️</span>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-orange-700">
+                    Important
+                  </p>
+                </div>
               </div>
-              <h3 className="mt-6 text-base font-semibold uppercase tracking-[0.24em] text-orange-700">
-                Eligibility note
-              </h3>
-              <p className="mt-4 text-sm leading-7 text-slate-700">
-                SASSA grants are not accepted as proof of income. We only
-                consider applications from customers with a regular employment
-                income source.
+              <p className="mt-6 text-sm leading-7 text-slate-800">
+                SASSA grants cannot be accepted as proof of income.
               </p>
             </MotionDiv>
           </Reveal>

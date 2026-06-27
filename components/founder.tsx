@@ -26,7 +26,7 @@ export function Founder() {
 
           <div className="text-center lg:text-left">
             <span className="inline-flex items-center justify-center rounded-full bg-orange-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-orange-700 shadow-sm ring-1 ring-orange-100">
-              Meet Our Founder
+              A Message From Our Founder
             </span>
             <Quote className="mx-auto mt-7 h-12 w-12 text-orange-400 lg:mx-0" aria-hidden="true" />
             <blockquote className="mx-auto mt-6 max-w-2xl text-xl font-semibold leading-8 text-slate-900 sm:text-2xl lg:mx-0">

@@ -117,8 +117,8 @@ export function formatRand(value: number, decimals = 0) {
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'Loans', href: '#loans' },
+  { label: 'Calculator', href: '#calculator' },
   { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Why Us', href: '#why-us' },
   { label: 'Branches', href: '#contact' },
   { label: 'Contact', href: '#contact' },
 ]

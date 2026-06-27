@@ -24,8 +24,8 @@ export function ContactBranches() {
     <section id="contact" className="bg-secondary px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Contact &amp; Branches"
-          title="We’re right here in Lydenburg"
+          eyebrow="Visit Us or Get in Touch"
+          title="Visit one of our branches or get in touch today."
           description="Reach us instantly on WhatsApp, give us a call, or walk into either of our two branches. We’re always happy to help."
         />
 

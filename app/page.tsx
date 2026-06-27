@@ -9,7 +9,6 @@ import { Referral } from '@/components/referral'
 import { WhyChoose } from '@/components/why-choose'
 import { Testimonials } from '@/components/testimonials'
 import { Founder } from '@/components/founder'
-import { Fees } from '@/components/fees'
 import { ContactBranches } from '@/components/contact-branches'
 import { SiteFooter } from '@/components/site-footer'
 import { MobileActionBar } from '@/components/mobile-action-bar'
@@ -21,7 +20,7 @@ const jsonLd = {
   '@type': 'FinancialService',
   name: COMPANY.legalName,
   description:
-    'Quick, responsible loans from R350 to R8,000 in Lydenburg with fast approvals, transparent fees and friendly local service.',
+    'Fast approvals. Transparent fees. Friendly local service.',
   email: COMPANY.email,
   telephone: '+27' + COMPANY.officePhone.replace(/\D/g, '').replace(/^0/, ''),
   areaServed: 'Lydenburg, Mpumalanga, South Africa',
@@ -96,7 +95,6 @@ export default function Home() {
         <WhyChoose />
         <Testimonials />
         <Founder />
-        <Fees />
         <ContactBranches />
       </main>
       <SiteFooter />

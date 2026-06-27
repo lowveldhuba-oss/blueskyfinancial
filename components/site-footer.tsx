@@ -11,19 +11,9 @@ export function SiteFooter() {
             <Logo />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-background/60">
               <span className="font-semibold text-background">
-                {COMPANY.legalName} is a registered South African credit provider committed to responsible, transparent and affordable short-term lending.
+                {COMPANY.legalName} is a trusted NCR registered credit provider, committed to responsible lending and exceptional customer service.
               </span>
             </p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full border border-background/15 bg-background/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-background/90">
-                <ShieldCheck className="h-3.5 w-3.5 text-orange-400" aria-hidden="true" />
-                NCA compliant
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-background/15 bg-background/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-background/90">
-                <span className="h-3.5 w-3.5 rounded-full bg-orange-100 text-orange-700 flex items-center justify-center text-[10px]">NCR</span>
-                Registered credit provider
-              </span>
-            </div>
             <div className="mt-5 flex gap-3">
               <a
                 href={waLink(DEFAULT_WA_MESSAGE)}
@@ -85,9 +75,10 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-10 border-t border-background/15 pt-6 lg:flex lg:items-start lg:justify-between lg:gap-6">
-          <p className="max-w-2xl text-xs leading-relaxed text-background/50">
-            Loans are issued after affordability checks. BlueSky Financial Services promotes responsible lending under the National Credit Act.
-          </p>
+          <div className="max-w-2xl space-y-2 text-xs leading-relaxed text-background/50">
+            <p>NCR Registered Credit Provider • NCRCP19207</p>
+            <p>Loans are issued after affordability checks. BlueSky Financial Services promotes responsible lending under the National Credit Act.</p>
+          </div>
           <div className="mt-4 space-y-2 text-xs text-background/50 lg:mt-0">
             <p>© {new Date().getFullYear()} BlueSky Financial Services (Pty) Ltd. All rights reserved.</p>
             <p>

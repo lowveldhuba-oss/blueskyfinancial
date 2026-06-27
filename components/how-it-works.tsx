@@ -73,9 +73,6 @@ export function HowItWorks() {
           ))}
         </ol>
 
-        <p className="mt-8 text-center text-sm text-slate-500">
-          Local branch support in Lydenburg makes the process feel personal, fast and secure.
-        </p>
       </div>
     </section>
   )

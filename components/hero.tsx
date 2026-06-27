@@ -26,16 +26,18 @@ export function Hero() {
       {/* Background image of employee + building */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero-employee.png"
-          alt="A friendly BlueSky Financial Services consultant standing outside a modern branch in Lydenburg"
+          src="/hero 4.png"
+          alt="A BlueSky consultant standing in front of a modern branch building, cropped to keep the focus above the hands"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[50%_15%]"
+          className="object-cover object-[50%_12%] sm:object-[50%_10%] md:object-[48%_08%] lg:object-[52%_08%]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/0 via-background/10 to-background/6 md:via-background/20 md:to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent md:from-background/30" />
       </div>
+
+      <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-full max-w-3xl bg-gradient-to-r from-slate-950/85 via-slate-950/15 to-transparent md:block" />
 
       <MotionDiv x={-18} delay={0.05} className="relative z-10 mx-auto grid max-w-7xl gap-8 px-4 pb-14 pt-10 sm:px-6 lg:grid-cols-[1.05fr_minmax(0,460px)] lg:gap-6 lg:px-8 lg:pb-20 lg:pt-16">
         {/* Copy */}
@@ -50,12 +52,16 @@ export function Hero() {
             <span className="text-primary">You Can Count On</span>
           </h1>
 
-          <p className="mt-5 max-w-md text-base leading-relaxed text-foreground sm:text-lg">
-            Quick, transparent loans from{' '}
-            <span className="font-semibold text-primary">
-              {formatRand(COMPANY.loanMin)} to {formatRand(COMPANY.loanMax)}
+          <p className="mt-5 max-w-md text-base leading-relaxed text-slate-100 sm:text-lg">
+            Responsible short-term loans from{' '}
+            <span className="font-semibold text-orange-500">
+              {formatRand(COMPANY.loanMin)}
             </span>{' '}
-            with fast approvals and local Lydenburg support.
+            <span className="font-semibold text-white">to</span>{' '}
+            <span className="font-semibold text-orange-500">
+              {formatRand(COMPANY.loanMax)}
+            </span>{' '}
+            with fast approvals, transparent fees and friendly local service.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -88,12 +94,6 @@ export function Hero() {
             </motion.div>
           </div>
 
-          <div className="mt-4 flex flex-wrap gap-2 text-xs text-slate-600 sm:mt-5">
-            <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-3 py-1 font-semibold text-slate-700 shadow-sm">
-              <ShieldCheck className="h-4 w-4 text-orange-500" aria-hidden="true" />
-              NCR registered • SACRRA member • Two local branches
-            </span>
-          </div>
         </div>
 
         {/* Placeholder column (calculator moved to its own section) */}

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s | BlueSky Financial Services',
   },
   description:
-    'Quick, responsible loans from R350 to R8,000 in Lydenburg. Fast approvals, transparent fees and friendly local service. Apply via WhatsApp or visit one of our two branches. NCR Registered Credit Provider NCRCP19207.',
+    'Fast approvals. Transparent fees. Friendly local service.',
   keywords: [
     'Loans Lydenburg',
     'Personal Loans Lydenburg',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: 'BlueSky Financial Services | A Helping Hand You Can Count On',
     description:
-      'Quick, responsible loans from R350 to R8,000 in Lydenburg with fast approvals and transparent fees.',
+      'Fast approvals. Transparent fees. Friendly local service.',
     siteName: 'BlueSky Financial Services',
     images: [
       {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BlueSky Financial Services | A Helping Hand You Can Count On',
     description:
-      'Quick, responsible loans from R350 to R8,000 in Lydenburg with fast approvals and transparent fees.',
+      'Fast approvals. Transparent fees. Friendly local service.',
     images: [`${SITE_URL}/hero-employee.png`],
   },
   icons: {

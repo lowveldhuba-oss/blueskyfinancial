@@ -11,25 +11,21 @@ const PRODUCTS = [
     desc: `Flexible personal loans from ${formatRand(COMPANY.loanMin)} to ${formatRand(
       COMPANY.loanMax,
     )} to help you today.`,
-    badge: 'Instant decision',
   },
   {
     icon: CalendarClock,
     title: 'Payday Support',
     desc: 'Short-term salary advances to get you through before payday.',
-    badge: 'Transparent pricing',
   },
   {
     icon: LifeBuoy,
     title: 'Emergency Cash',
     desc: 'Quick help for unexpected expenses and urgent needs.',
-    badge: 'Emergency access',
   },
   {
     icon: Store,
     title: 'Branch Support',
     desc: 'Friendly in-person service at our two Lydenburg branches.',
-    badge: 'Local branch service',
   },
 ]
 
@@ -60,9 +56,6 @@ export function LoanProducts() {
                   <p className="mt-4 text-sm leading-relaxed text-slate-600">
                     {p.desc}
                   </p>
-                </div>
-                <div className="mt-6 inline-flex rounded-full border border-sky-200/80 bg-sky-50 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-700">
-                  {p.badge}
                 </div>
               </MotionDiv>
             </Reveal>
