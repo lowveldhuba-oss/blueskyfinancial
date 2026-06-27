@@ -26,10 +26,10 @@ export function Hero() {
       transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       {/* Mobile and tablet hero */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <div className="absolute inset-0">
           <Image
-            src="/hero 4.png"
+            src="/hero-employee.png"
             alt="A BlueSky consultant standing in front of a modern branch building"
             fill
             priority
@@ -130,7 +130,7 @@ export function Hero() {
       </div>
 
       {/* Desktop hero */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         {/* Background image of employee + building */}
         <div className="absolute inset-0 z-0">
           <Image
