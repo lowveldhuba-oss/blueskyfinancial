@@ -26,7 +26,7 @@ export function Hero() {
       {/* Background image of employee + building */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero-employee.png"
+          src="/hero 4.png"
           alt="A friendly BlueSky Financial Services consultant standing outside a modern branch in Lydenburg"
           fill
           priority
