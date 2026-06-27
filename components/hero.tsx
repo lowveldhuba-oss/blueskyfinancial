@@ -102,7 +102,7 @@ export function Hero() {
 
         {/* Placeholder column (calculator moved to its own section) */}
         <div className="hidden lg:block" />
-      </MotionDiv>
-    </section>
+      </div>
+    </motion.section>
   )
 }
