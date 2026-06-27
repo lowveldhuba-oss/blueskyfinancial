@@ -52,17 +52,23 @@ export function Hero() {
             <span className="text-primary">You Can Count On</span>
           </h1>
 
-          <p className="mt-5 max-w-md text-base leading-relaxed text-slate-100 sm:text-lg">
-            Responsible short-term loans from{' '}
-            <span className="font-semibold text-orange-500">
-              {formatRand(COMPANY.loanMin)}
-            </span>{' '}
-            <span className="font-semibold text-white">to</span>{' '}
-            <span className="font-semibold text-orange-500">
-              {formatRand(COMPANY.loanMax)}
-            </span>{' '}
-            with fast approvals, transparent fees and friendly local service.
-          </p>
+          <div className="mt-5 max-w-[18rem] rounded-3xl bg-sky-100/90 px-4 py-4 text-base leading-relaxed text-slate-950 sm:max-w-md sm:text-lg">
+            <p>
+              Responsible short-term loans
+              <span className="block sm:hidden" />
+              from{' '}
+              <span className="font-semibold text-orange-500">
+                {formatRand(COMPANY.loanMin)}
+              </span>{' '}
+              <span className="font-semibold text-slate-950">to</span>{' '}
+              <span className="font-semibold text-orange-500">
+                {formatRand(COMPANY.loanMax)}
+              </span>{' '}
+              with fast approvals,
+              <span className="block sm:hidden" />
+              transparent fees and friendly local service.
+            </p>
+          </div>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <motion.div
